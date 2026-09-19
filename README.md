@@ -110,7 +110,7 @@ export const cafeConfig = {
 
 ### 3. Replacing Images or Logo
 - **Official Logo**: Replace `public/images/Logo.png`.
-- **Café Photography**: Replace or add photos in `public/images/1.jpg` through `public/images/5.jpg`.
+- **Café Photography**: Replace or add photos in `public/images/1.png` through `public/images/5.png`.
 
 ---
 

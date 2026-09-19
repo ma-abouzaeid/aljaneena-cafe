@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Coffee, Users, Leaf, ChevronDown } from 'lucide-react';
 import { cafeConfig } from '@/config/cafeConfig';
+import { getImagePath } from '@/utils/imagePath';
 
 export const Hero: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ export const Hero: React.FC = () => {
       {/* Hero Background Image with Dark Botanical Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/3.jpg"
+          src={getImagePath('/images/3.png')}
           alt="الجنينة كافيه - الأجواء"
           fill
           className="object-cover object-center scale-105 filter brightness-75 contrast-110"
@@ -37,7 +38,7 @@ export const Hero: React.FC = () => {
           <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-amber opacity-75 blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
           <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white p-2 border-2 border-brand-gold shadow-glow-gold flex items-center justify-center">
             <Image
-              src="/images/Logo.png"
+              src={getImagePath('/images/Logo.png')}
               alt="الجنينة Café & Bistro"
               width={140}
               height={140}

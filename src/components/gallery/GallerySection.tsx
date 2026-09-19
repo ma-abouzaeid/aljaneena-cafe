@@ -3,13 +3,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ZoomIn, X } from 'lucide-react';
+import { getImagePath } from '@/utils/imagePath';
 
 const galleryImages = [
-  { id: 1, src: '/images/1.jpg', title: 'عصائر وطازجة', span: 'col-span-1 md:col-span-2 row-span-2' },
-  { id: 2, src: '/images/2.jpg', title: 'جلسات خارجية هادئة', span: 'col-span-1 row-span-1' },
-  { id: 3, src: '/images/3.jpg', title: 'شاشة عرض المباريات والأجواء الحماسية', span: 'col-span-1 row-span-1' },
-  { id: 4, src: '/images/4.jpg', title: 'جلسات البلايستيشن والإضاءة الدافئة', span: 'col-span-1 md:col-span-2 row-span-1' },
-  { id: 5, src: '/images/5.jpg', title: 'الأجواء الطبيعية المفتوحة', span: 'col-span-1 row-span-1' },
+  { id: 1, src: getImagePath('/images/1.png'), title: 'عصائر وطازجة', span: 'col-span-1 md:col-span-2 row-span-2' },
+  { id: 2, src: getImagePath('/images/2.png'), title: 'جلسات خارجية هادئة', span: 'col-span-1 row-span-1' },
+  { id: 3, src: getImagePath('/images/3.png'), title: 'شاشة عرض المباريات والأجواء الحماسية', span: 'col-span-1 row-span-1' },
+  { id: 4, src: getImagePath('/images/4.png'), title: 'جلسات البلايستيشن والإضاءة الدافئة', span: 'col-span-1 md:col-span-2 row-span-1' },
+  { id: 5, src: getImagePath('/images/5.png'), title: 'الأجواء الطبيعية المفتوحة', span: 'col-span-1 row-span-1' },
 ];
 
 export const GallerySection: React.FC = () => {

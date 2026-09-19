@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getImagePath } from "@/utils/imagePath";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "الجنينة | Café & Bistro",
     description: "أكثر من كافيه.. دي حالة.. الجنينة مكانك الطبيعي",
-    images: ["/images/Logo.png"],
+    images: [getImagePath("/images/Logo.png")],
     locale: "ar_EG",
     type: "website",
   },
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
-        <link rel="icon" href="/images/Logo.png" />
+        <link rel="icon" href={getImagePath("/images/Logo.png")} />
       </head>
       <body className="bg-brand-darkGreen text-brand-cream antialiased font-arabic selection:bg-brand-gold selection:text-brand-darkGreen">
         {children}

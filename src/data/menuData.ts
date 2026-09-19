@@ -1,3 +1,5 @@
+import { getImagePath } from '@/utils/imagePath';
+
 export interface MenuItem {
   id: string;
   name: string;
@@ -22,7 +24,7 @@ export const menuCategories: MenuCategory[] = [
     englishName: 'Hot Drinks',
     subtitle: 'دفء في كل كوب',
     iconName: 'Coffee',
-    image: '/images/hot-drinks-cat.jpg',
+    image: getImagePath('/images/hot-drinks-cat.jpg'),
     items: [
       { id: 'h1', name: 'شاي', price: 10 },
       { id: 'h2', name: 'شاي فتله', price: 15 },
@@ -55,7 +57,7 @@ export const menuCategories: MenuCategory[] = [
     englishName: 'Cold Drinks',
     subtitle: 'انتعاش بطعم مختلف',
     iconName: 'GlassWater',
-    image: '/images/cold-drinks-cat.jpg',
+    image: getImagePath('/images/cold-drinks-cat.jpg'),
     items: [
       { id: 'c1', name: 'ايس كوفي', price: 35, popular: true },
       { id: 'c2', name: 'ليمون', price: 25 },
@@ -78,7 +80,7 @@ export const menuCategories: MenuCategory[] = [
     englishName: 'Shisha',
     subtitle: 'جلسة بطعم أجمل',
     iconName: 'Flame',
-    image: '/images/shisha-cat.jpg',
+    image: getImagePath('/images/shisha-cat.jpg'),
     items: [
       { id: 's1', name: 'حجر قص', price: 10 },
       { id: 's2', name: 'حجر سلوم', price: 10 },

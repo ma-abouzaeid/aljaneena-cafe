@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Heart, Users, Leaf } from 'lucide-react';
 import { cafeConfig } from '@/config/cafeConfig';
+import { getImagePath } from '@/utils/imagePath';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const AboutSection: React.FC = () => {
           {/* Background Image Container with Gradient Overlays */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/3.jpg"
+              src={getImagePath('/images/3.png')}
               alt="الجنينة - عن الكافيه"
               fill
               className="object-cover filter brightness-50 contrast-110"

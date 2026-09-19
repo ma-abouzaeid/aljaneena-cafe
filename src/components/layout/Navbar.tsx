@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu as MenuIcon, X } from 'lucide-react';
+import { getImagePath } from '@/utils/imagePath';
 
 const navLinks = [
   { name: 'الرئيسية', href: '#hero' },
@@ -60,7 +61,7 @@ export const Navbar: React.FC = () => {
         <Link href="#hero" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-brand-gold/50 group-hover:border-brand-gold transition-colors duration-300 bg-white p-0.5">
             <Image
-              src="/images/Logo.png"
+              src={getImagePath('/images/Logo.png')}
               alt="الجنينة كافيه - Logo"
               fill
               className="object-contain p-0.5"

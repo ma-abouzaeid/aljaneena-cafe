@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, ArrowUp } from 'lucide-react';
 import { cafeConfig } from '@/config/cafeConfig';
+import { getImagePath } from '@/utils/imagePath';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +25,7 @@ export const Footer: React.FC = () => {
           <Link href="#hero" className="mb-4 group">
             <div className="relative w-20 h-20 rounded-full bg-white p-1 border-2 border-brand-gold shadow-glow-gold group-hover:scale-105 transition-transform">
               <Image
-                src="/images/Logo.png"
+                src={getImagePath('/images/Logo.png')}
                 alt="الجنينة Café & Bistro"
                 fill
                 className="object-contain p-1"
@@ -90,6 +91,22 @@ export const Footer: React.FC = () => {
           >
             <ArrowUp size={16} />
           </button>
+        </div>
+
+        {/* Developer Credit */}
+        <div className="mt-8 pt-6 border-t border-brand-gold/15 text-center text-xs dir-ltr">
+          <p className="font-semibold text-brand-gold/90 text-sm tracking-wide">
+            Built By Eng. Mahmoud Abou-Zaeid
+          </p>
+          <p className="text-brand-cream/70 mt-1">
+            Phone:{' '}
+            <a
+              href="tel:+201017119544"
+              className="text-brand-gold hover:underline transition-all"
+            >
+              +201017119544
+            </a>
+          </p>
         </div>
       </div>
     </footer>
